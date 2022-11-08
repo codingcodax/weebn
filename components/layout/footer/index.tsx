@@ -1,8 +1,22 @@
+import Link from 'next/link';
+
+import Links from './Links';
+
 const Footer = () => {
   return (
-    <div>
-      <p>Footer Component</p>
-    </div>
+    <footer className='flex flex-col items-center space-y-16 py-4 pb-8'>
+      <Links />
+      <p>
+        &copy; 2022 — Handcrafted with 💜 by{' '}
+        <Link
+          href='https://github.com/codingcodax/'
+          rel='noopener noreferrer'
+          target='_blank'
+        >
+          codingcodax
+        </Link>
+      </p>
+    </footer>
   );
 };
 
