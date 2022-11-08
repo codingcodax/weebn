@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-zinc-900;
+  }
+}
+
+@layer components {
+  .primary-button {
+    @apply w-fit rounded-lg bg-zinc-900 px-8 py-4 text-white transition-colors duration-300 hover:bg-zinc-700;
+  }
+}
