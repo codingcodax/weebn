@@ -1,8 +1,14 @@
+import WidgetsList from './WidgetsList';
+
 const ExploreWidgets = () => {
   return (
-    <div>
-      <p>Explore Widgets Component</p>
-    </div>
+    <section className='min-h-screen px-4' id='widgets'>
+      <h3 className='mb-6 text-2xl font-bold' id='widgets'>
+        Explore Widgets
+      </h3>
+
+      <WidgetsList />
+    </section>
   );
 };
 
