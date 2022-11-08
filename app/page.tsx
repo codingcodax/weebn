@@ -1,7 +1,9 @@
+import { Hero } from '~/components/pages/home';
+
 const Home = () => {
   return (
-    <div>
-      <p>Home page</p>
+    <div className='h-full'>
+      <Hero />
     </div>
   );
 };
