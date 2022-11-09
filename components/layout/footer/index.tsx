@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className='flex flex-col items-center space-y-16 px-4 pb-8'>
       <Links />
-      <p>
+      <p className='text-center'>
         &copy; 2022 — Handcrafted with 💜 by{' '}
         <Link
           href='https://github.com/codingcodax/'
