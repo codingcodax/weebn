@@ -1,10 +1,10 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
 interface WidgetItemProps {
   href: string;
-  image: string;
+  image: StaticImageData;
   title: string;
   description: string;
 }
@@ -16,18 +16,21 @@ const WidgetItem: FC<WidgetItemProps> = ({
   description,
 }) => {
   return (
-    <li className='rounded-md border border-zinc-900'>
-      <Image
-        alt={title}
-        className='aspect-video rounded-t-md rounded-b-xl'
-        height={250}
-        src={`/images${image}`}
-        width={420}
-      />
+    <li className='rounded-md border border-zinc-900 transition-transform duration-200 hover:-translate-y-1'>
+      <Link href={`/editor${href}`}>
+        <Image
+          alt={title}
+          className='aspect-video rounded-t-md rounded-b-xl'
+          height={250}
+          placeholder='blur'
+          src={image}
+          width={420}
+        />
 
-      <Link className='inline-block py-4 px-2' href={`/editor/${href}`}>
-        <h4 className='text-lg'>{title}</h4>
-        <p className='text-zinc-700'>{description}</p>
+        <div className='inline-block py-4 px-2'>
+          <h4 className='text-lg'>{title}</h4>
+          <p className='text-zinc-700'>{description}</p>
+        </div>
       </Link>
     </li>
   );

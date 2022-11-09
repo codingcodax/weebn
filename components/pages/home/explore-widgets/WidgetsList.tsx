@@ -1,21 +1,25 @@
+import QuotesImage from '~/public/images/quotes.png';
+import ImageGalleryImage from '~/public/images/image-gallery.png';
+import DailyAnimeImage from '~/public/images/daily-anime.png';
+
 import WidgetItem from './WidgetItem';
 
 const widgetsItems = [
   {
     href: '/quotes',
-    image: '/quotes.png',
+    image: QuotesImage,
     title: 'Quotes',
     description: 'Anime quotes from AnimeChan',
   },
   {
     href: '/image-gallery',
-    image: '/image-gallery.png',
+    image: ImageGalleryImage,
     title: 'Image Gallery',
     description: 'Images from Nekos',
   },
   {
     href: 'daily-anime',
-    image: '/daily-anime.png',
+    image: DailyAnimeImage,
     title: 'Random Anime',
     description: 'Show a random anime to see',
   },
