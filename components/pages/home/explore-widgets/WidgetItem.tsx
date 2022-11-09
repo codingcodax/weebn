@@ -16,8 +16,11 @@ const WidgetItem: FC<WidgetItemProps> = ({
   description,
 }) => {
   return (
-    <li className='rounded-md border border-zinc-900 transition-transform duration-200 hover:-translate-y-1'>
-      <Link href={`/editor${href}`}>
+    <li>
+      <Link
+        className='inline-block rounded-md border border-zinc-900 transition-transform duration-200 hover:-translate-y-1'
+        href={`/editor${href}`}
+      >
         <Image
           alt={title}
           className='aspect-video rounded-t-md rounded-b-xl'
