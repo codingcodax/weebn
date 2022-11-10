@@ -1,9 +1,5 @@
 const Editor = () => {
-  return (
-    <div>
-      <p>Editor</p>
-    </div>
-  );
+  return null;
 };
 
 export default Editor;
