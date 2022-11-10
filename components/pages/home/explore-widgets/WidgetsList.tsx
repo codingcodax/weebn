@@ -18,7 +18,7 @@ const widgetsItems = [
     description: 'Images from Nekos',
   },
   {
-    href: 'daily-anime',
+    href: '/daily-anime',
     image: DailyAnimeImage,
     title: 'Random Anime',
     description: 'Show a random anime to see',
