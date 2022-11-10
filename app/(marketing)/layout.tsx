@@ -1,7 +1,11 @@
-const MarketingLayout = () => {
+import { Footer, Header } from '~/components/layout';
+
+const MarketingLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
-      <p>Marketing Layout</p>
+    <div className='grid h-screen grid-rows-[auto_1fr_auto] gap-y-4'>
+      <Header />
+      {children}
+      <Footer />
     </div>
   );
 };
