@@ -1,9 +1,5 @@
-const EditorLayout = () => {
-  return (
-    <div>
-      <p>Editor Layout</p>
-    </div>
-  );
+const EditorLayout = ({ children }: { children: React.ReactNode }) => {
+  return <div>{children}</div>;
 };
 
 export default EditorLayout;
