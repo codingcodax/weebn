@@ -1,8 +1,10 @@
+import * as SwitchRadix from '@radix-ui/react-switch';
+
 const Switch = () => {
   return (
-    <div>
-      <p>Switch Component</p>
-    </div>
+    <SwitchRadix.Root>
+      <SwitchRadix.Thumb />
+    </SwitchRadix.Root>
   );
 };
 
