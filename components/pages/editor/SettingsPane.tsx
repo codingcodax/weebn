@@ -29,13 +29,4 @@ SettingsPane.Title = ({ children }: SettingsPaneTitleProps) => {
   return <p className='text-sm uppercase text-zinc-500'>{children}</p>;
 };
 
-interface SettingsPaneOptionProps {
-  children: React.ReactNode;
-}
-
-// eslint-disable-next-line react/display-name
-SettingsPane.Option = ({ children }: SettingsPaneOptionProps) => {
-  return <div>{children}</div>;
-};
-
 export default SettingsPane;
