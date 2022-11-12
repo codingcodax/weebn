@@ -1,3 +1,5 @@
+import { Dispatch } from 'react';
+
 import { Switch } from '~/components/ui';
 
 interface OptionItemProps {
@@ -27,18 +29,15 @@ OptionItem.Description = ({ children }: OptionItemDescriptionProps) => {
 };
 
 interface OptionItemSwitchProps {
-  enabled?: boolean;
-  setEnabled: () => void;
+  isEnabled?: boolean;
+  toggle: Dispatch<boolean>;
 }
 
 // eslint-disable-next-line react/display-name
-OptionItem.Switch = ({
-  enabled = false,
-  setEnabled,
-}: OptionItemSwitchProps) => {
+OptionItem.Switch = ({ isEnabled = false, toggle }: OptionItemSwitchProps) => {
   return (
     <div className='col-start-2 row-span-2 grid items-center'>
-      <Switch enabled={enabled} setEnabled={setEnabled} />
+      <Switch isEnabled={isEnabled} toggle={toggle} />
     </div>
   );
 };
