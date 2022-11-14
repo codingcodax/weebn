@@ -1,14 +1,16 @@
 'use client';
 
 import { Switch } from '@headlessui/react';
-import { Dispatch, FC } from 'react';
+import { Dispatch } from 'react';
+
+import Skeleton from './Skeleton';
 
 interface MySwitchProps {
   isEnabled: boolean;
   toggle: Dispatch<boolean>;
 }
 
-const MySwitch: FC<MySwitchProps> = ({ isEnabled, toggle }) => {
+const MySwitch = ({ isEnabled, toggle }: MySwitchProps) => {
   return (
     <Switch
       checked={isEnabled}
@@ -24,6 +26,11 @@ const MySwitch: FC<MySwitchProps> = ({ isEnabled, toggle }) => {
       />
     </Switch>
   );
+};
+
+// eslint-disable-next-line react/display-name
+MySwitch.Skeleton = () => {
+  return <Skeleton className='inline-block h-6 w-11 rounded-full' />;
 };
 
 export default MySwitch;
