@@ -1,11 +1,8 @@
-import { useTheme } from 'next-themes';
-
 import { useDarkMode, useHasMounted } from '~/hooks/index';
 import { Skeleton, Switch } from '~/components/ui';
 
 const ThemeSwitch = () => {
   const hasMounted = useHasMounted();
-  const { theme, resolvedTheme, setTheme } = useTheme();
   const { isDarkMode, toggleTheme } = useDarkMode();
 
   return (
