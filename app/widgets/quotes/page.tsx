@@ -1,6 +1,25 @@
+'use client';
+
+import { useSearchParams } from 'next/navigation';
+
+import { ThemeSwitch } from '~/components/pages/editor';
+
 const Quotes = () => {
+  const searchParams = useSearchParams();
+
+  const getSearchParams = (param: string) => {
+    const searchParam = searchParams.get(param);
+
+    return searchParam === 'true' ? true : false;
+  };
+
+  const showThemeButton = getSearchParams('showThemeButton');
+  const showAnimeCharacter = getSearchParams('showAnimeCharacter');
+  const showAnimeTitle = getSearchParams('showAnimeTitle');
+
   return (
-    <div className='flex h-screen flex-col items-center justify-center p-4'>
+    <div className='flex h-screen flex-col items-center justify-center p-4 text-[#37352f] dark:bg-[#191919] dark:text-[#d3d3d3]'>
+      {showThemeButton && <ThemeSwitch />}
       <div className='max-w-lg space-y-6'>
         <h1 className='text-xl italic'>
           &quot;Listen to yourself whining and complaining like some sorry
@@ -8,10 +27,16 @@ const Quotes = () => {
           nothing but a coward!&quot;
         </h1>
 
-        <div className='h-px w-1/2 bg-zinc-500' />
+        {(showAnimeCharacter || showAnimeTitle) && (
+          <div className='h-px bg-[#dfdedd] dark:bg-[#373737]' />
+        )}
 
-        <h2>Naruto Uzumaki &mdash; Naruto</h2>
-      </div>{' '}
+        <h2>
+          {showAnimeCharacter && 'Naruto Uzumaki '}
+          {showAnimeCharacter && showAnimeTitle && <span>&mdash; </span>}
+          {showAnimeTitle && 'Naruto'}
+        </h2>
+      </div>
     </div>
   );
 };
