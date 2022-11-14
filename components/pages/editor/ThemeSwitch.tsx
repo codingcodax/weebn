@@ -1,5 +1,5 @@
 import { useDarkMode, useHasMounted } from '~/hooks/index';
-import { Skeleton, Switch } from '~/components/ui';
+import { Switch } from '~/components/ui';
 
 const ThemeSwitch = () => {
   const hasMounted = useHasMounted();
@@ -12,7 +12,7 @@ const ThemeSwitch = () => {
         {hasMounted ? (
           <Switch isEnabled={isDarkMode} toggle={toggleTheme} />
         ) : (
-          <Skeleton className='inline-block h-6 w-11 rounded-full' />
+          <Switch.Skeleton />
         )}
       </label>
     </div>
