@@ -42,4 +42,13 @@ OptionItem.Switch = ({ isEnabled = false, toggle }: OptionItemSwitchProps) => {
   );
 };
 
+// eslint-disable-next-line react/display-name
+OptionItem.SwitchSkeleton = () => {
+  return (
+    <div className='col-start-2 row-span-2 grid items-center'>
+      <Switch.Skeleton />
+    </div>
+  );
+};
+
 export default OptionItem;
