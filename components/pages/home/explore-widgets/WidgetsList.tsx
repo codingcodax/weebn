@@ -27,7 +27,7 @@ const widgetsItems = [
 
 const WidgetsList = () => {
   return (
-    <ul className='grid grid-cols-1 gap-4 min-[500px]:grid-cols-2'>
+    <ul className='grid grid-cols-1 gap-4 min-[500px]:grid-cols-2 lg:grid-cols-3'>
       {widgetsItems.map(({ href, image, title, description }) => (
         <WidgetItem
           key={title}
