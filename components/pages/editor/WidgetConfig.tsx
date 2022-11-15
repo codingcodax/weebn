@@ -40,11 +40,11 @@ WidgetConfig.Title = ({ children }: WidgetConfigTitleProps) => {
 };
 
 interface WidgetConfigFooterProps {
-  widgetLink: string;
+  widgetUrl: string;
 }
 
 // eslint-disable-next-line react/display-name
-WidgetConfig.Footer = ({ widgetLink }: WidgetConfigFooterProps) => {
+WidgetConfig.Footer = ({ widgetUrl }: WidgetConfigFooterProps) => {
   return (
     <div>
       <div className='h-px bg-zinc-500' />
@@ -54,7 +54,7 @@ WidgetConfig.Footer = ({ widgetLink }: WidgetConfigFooterProps) => {
       </p>
 
       <div className='relative'>
-        <Input disabled id='widgetLink' value={widgetLink} />
+        <Input disabled id='widgetLink' value={widgetUrl} />
         <Icons.copy className='absolute top-3 right-4' height='16' width='16' />
       </div>
     </div>
