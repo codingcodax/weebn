@@ -1,5 +1,7 @@
 'use client';
 
+import { env } from 'process';
+
 import { useEffect, useState } from 'react';
 
 import {
@@ -11,7 +13,10 @@ import {
 } from '~/components/pages/editor';
 import { useDarkMode, useHasMounted, useToggle } from '~/hooks/index';
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL =
+  process.env.NODE_ENV === 'production'
+    ? process.env.BASE_URL
+    : 'http://localhost:3000';
 const PATH = '/widgets/quotes?';
 const queries =
   'showThemeButton=true&showAnimeCharacter=true&showAnimeTitle=true';
