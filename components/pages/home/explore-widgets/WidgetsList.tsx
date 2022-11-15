@@ -1,6 +1,6 @@
-import QuotesImage from '~/public/images/quotes.png';
-import ImageGalleryImage from '~/public/images/image-gallery.png';
-import DailyAnimeImage from '~/public/images/daily-anime.png';
+import QuotesImage from '~/public/images/quotes.jpg';
+import ImageGalleryImage from '~/public/images/image-gallery.jpg';
+import DailyAnimeImage from '~/public/images/daily-anime.jpg';
 
 import WidgetItem from './WidgetItem';
 
