@@ -8,7 +8,7 @@ const Hero = () => {
         <h2 className='mb-4 text-xl text-zinc-700'>
           Weeb widgets for Notion, free and easy to use
         </h2>
-        <Link className='primary-button inline-block' href='#widgets'>
+        <Link className='primary-button inline-block' href='/#widgets'>
           Explore Widgets
         </Link>
       </div>
