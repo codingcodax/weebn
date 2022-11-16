@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
@@ -7,6 +8,7 @@ interface WidgetItemProps {
   image: StaticImageData;
   title: string;
   description: string;
+  disabled?: boolean;
 }
 
 const WidgetItem: FC<WidgetItemProps> = ({
@@ -14,12 +16,16 @@ const WidgetItem: FC<WidgetItemProps> = ({
   image,
   title,
   description,
+  disabled,
 }) => {
   return (
     <li>
       <Link
-        className='inline-block w-full rounded-md border border-zinc-900 transition-transform duration-200 hover:-translate-y-1'
-        href={`/editor${href}`}
+        className={clsx(
+          'inline-block w-full rounded-md border border-zinc-900 transition-transform duration-200 hover:-translate-y-1',
+          disabled && 'cursor-not-allowed'
+        )}
+        href={disabled ? '#' : `/editor${href}`}
       >
         <Image
           alt={title}
