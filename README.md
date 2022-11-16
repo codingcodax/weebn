@@ -4,7 +4,7 @@ Level up your Notion with our light weight weeb widgets fully customizable and r
 
 <p align='center'>
   <a href='https://github.com/codingcodax/weebn'>
-    <img src='./public/images/logo.jpg' width='80' height='80' />
+    <img src='./.github/assets/logo.png' width='80' height='80' />
   </a>
 
   <h1 align='center'>Weebn</h1>
