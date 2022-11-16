@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Icons, Input } from '~/components/ui';
+import { Icons, Input, Logo } from '~/components/ui';
 
 interface WidgetConfigProps {
   children: React.ReactNode;
@@ -18,7 +18,7 @@ const WidgetConfig = ({ children }: WidgetConfigProps) => {
 WidgetConfig.Nav = () => {
   return (
     <header>
-      <Link href='/'>Logo</Link>
+      <Logo />
     </header>
   );
 };
