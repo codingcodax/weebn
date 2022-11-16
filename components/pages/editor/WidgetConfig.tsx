@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
-import { Icons, Input, Logo } from '~/components/ui';
+import { useCopyToClipboard } from '~/hooks/index';
+import { Icons, Logo } from '~/components/ui';
 
 interface WidgetConfigProps {
   children: React.ReactNode;
@@ -53,10 +54,32 @@ WidgetConfig.Footer = ({ widgetUrl }: WidgetConfigFooterProps) => {
         Copy Link (then paste into Notion, and click &quot;Embed&quot;)
       </p>
 
-      <div className='relative'>
-        <Input disabled id='widgetLink' value={widgetUrl} />
-        <Icons.copy className='absolute top-3 right-4' height='16' width='16' />
-      </div>
+      <WidgetLinkInput inputValue={widgetUrl} />
+    </div>
+  );
+};
+
+const WidgetLinkInput = ({ inputValue }: { inputValue: string }) => {
+  const { isCopied, copy, textRef } = useCopyToClipboard();
+
+  return (
+    <div className='relative'>
+      <input
+        ref={textRef}
+        disabled
+        className='w-full rounded-md bg-zinc-200 py-2 px-4 pr-10'
+        value={inputValue}
+      />
+      <button
+        className='absolute top-0 right-0 flex h-10 w-10 items-center justify-center rounded-r-md bg-zinc-900 hover:bg-zinc-800'
+        onClick={() => copy()}
+      >
+        {isCopied ? (
+          'copied'
+        ) : (
+          <Icons.copy className='stroke-white' height='16' width='16' />
+        )}
+      </button>
     </div>
   );
 };
