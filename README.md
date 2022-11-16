@@ -2,7 +2,7 @@
 
 Level up your Notion with our light weight weeb widgets fully customizable and ready to use.
 
-> **Waring**
+> **Warning**
 > This app is work in progress, I'm building this in public. You can follow the progress on Twitter [@codingcodax](https://twitter.com/codingcodax)
 
 ## Features
@@ -14,7 +14,7 @@ Level up your Notion with our light weight weeb widgets fully customizable and r
 
 ## Roadmap
 
-> **Waring**
+> **Warning**
 > This app is work in progress, I'm building this in public. You can follow the progress on Twitter [@codingcodax](https://twitter.com/codingcodax)
 
 - [ ] Complete quotes widget
