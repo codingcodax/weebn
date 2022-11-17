@@ -72,10 +72,11 @@ const WidgetLinkInput = ({ inputValue }: { inputValue: string }) => {
       />
       <button
         className='absolute top-0 right-0 flex h-10 w-10 items-center justify-center rounded-r-md bg-zinc-900 hover:bg-zinc-800'
+        disabled={isCopied ? true : false}
         onClick={() => copy()}
       >
         {isCopied ? (
-          'copied'
+          <Icons.check className='stroke-white' height='16' width='16' />
         ) : (
           <Icons.copy className='stroke-white' height='16' width='16' />
         )}
