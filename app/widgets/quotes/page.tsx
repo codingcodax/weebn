@@ -18,7 +18,7 @@ const Quotes = () => {
   const showAnimeTitle = getSearchParams('showAnimeTitle');
 
   return (
-    <div className='flex h-screen flex-col items-center justify-center p-4 text-[#37352f] dark:bg-[#191919] dark:text-[#d3d3d3]'>
+    <div className='flex h-screen flex-col items-center justify-center p-4'>
       {showThemeButton && <ThemeSwitch />}
       <div className='max-w-lg space-y-6'>
         <h1 className='text-xl italic'>
