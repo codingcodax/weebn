@@ -5,7 +5,7 @@ import EditorMockup from '~/public/images/editor-mockup.jpg';
 
 const Hero = () => {
   return (
-    <main className='grid h-[calc(100vh-1rem-3.5rem)] px-4 md:grid-cols-2'>
+    <main className='grid h-[calc(100vh-1rem-2rem-35px)] px-4 md:grid-cols-2'>
       <div className='flex h-full flex-col justify-center'>
         <h1 className='text-5xl font-bold'>Weebn</h1>
         <h2 className='mb-4 text-xl text-zinc-700'>
