@@ -6,9 +6,7 @@ const Links = () => {
       <LinkItem disabled href='#widgets'>
         Widgets
       </LinkItem>
-      <LinkItem disabled href='/how-to-use'>
-        How To Use
-      </LinkItem>
+      <LinkItem href='/how-to-use'>How To Use</LinkItem>
     </ul>
   );
 };
