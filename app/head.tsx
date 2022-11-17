@@ -4,7 +4,7 @@ export default function Head() {
       <title>weebn | weeb notion widgets</title>
       <meta content='width=device-width, initial-scale=1' name='viewport' />
       <meta
-        content='Level up your Notion with our light weight weeb widgets fully cuztomizable adn ready to use.'
+        content='Level up your Notion with light weight weeb widgets, fully customizable and ready to use.'
         name='description'
       />
       <link href='/favicons/favicon.ico' rel='icon' />
