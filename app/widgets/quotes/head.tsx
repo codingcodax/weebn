@@ -1,13 +1,16 @@
+import { NextSeo } from 'next-seo';
+
+import SEO from 'next-seo.config';
+
 const Head = () => {
-  return (
-    <>
-      <title>weebn | configure quotes widget</title>
-      <meta
-        content='Quote widget for get anime quotes with dark mode option'
-        name='description'
-      />
-    </>
-  );
+  const updateMeta = {
+    ...SEO,
+    title: 'configure quotes widget',
+    description: 'Quote widget for get anime quotes with dark mode option',
+    titleTemplate: '%s',
+  };
+
+  return <NextSeo {...updateMeta} useAppDir={true} />;
 };
 
 export default Head;
