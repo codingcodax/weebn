@@ -5,7 +5,7 @@ import SEO from 'next-seo.config';
 const Head = () => {
   const updateMeta = {
     ...SEO,
-    title: 'configure quotes widget',
+    title: 'quotes widget',
     description: 'Quote widget for get anime quotes with dark mode option',
     titleTemplate: '%s',
   };
