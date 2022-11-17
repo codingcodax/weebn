@@ -8,6 +8,7 @@ const useCopyToClipborad = () => {
 
   const copy = () => {
     if (isCopied || !textRef?.current) return;
+    // @ts-ignore
     copyToClipboard(textRef.current.value);
     setCopied(true);
   };
