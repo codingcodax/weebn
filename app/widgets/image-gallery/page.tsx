@@ -2,8 +2,12 @@
 
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
+import useSWR from 'swr';
+
+import fetcher from '~/lib/fetcher';
 
 const ImageGallery = () => {
+  const { data } = useSWR('/api/image-gallery', fetcher);
   const searchParams = useSearchParams();
 
   const getSearchParams = (param: string) => {
@@ -26,16 +30,18 @@ const ImageGallery = () => {
 
   return (
     <div className='relative flex h-screen w-screen flex-col items-center justify-center'>
-      <Image
-        alt='A female anime/manga character.'
-        blurDataURL={`data:image/svg+xml;base64,${toBase64(
-          shimmer(1601, 2048, '#e0cfd0')
-        )}`}
-        fill={true}
-        objectFit='contain'
-        placeholder='blur'
-        src='https://cdn.waifu.im/161.jpeg'
-      />
+      {data && (
+        <Image
+          alt={data.alt}
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(
+            shimmer(data.width, data.height, data.color)
+          )}`}
+          fill={true}
+          objectFit='contain'
+          placeholder='blur'
+          src={data.imageUrl}
+        />
+      )}
     </div>
   );
 };
