@@ -16,7 +16,6 @@ const widgetsItems = [
     image: ImageGalleryImage,
     title: 'Image Gallery',
     description: 'Images from Nekos',
-    disabled: true,
   },
   {
     href: '/daily-anime',
