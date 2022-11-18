@@ -9,7 +9,7 @@ import {
   Tooltip,
   WidgetConfig,
 } from '~/components/pages/editor';
-import useToggle from '~/hooks/useToggle';
+import { useToggle, useHasMounted, useDarkMode } from '~/hooks/index';
 
 const BASE_URL =
   process.env.NODE_ENV === 'production'
@@ -19,6 +19,8 @@ const PATH = '/widgets/image-gallery?';
 const queries = 'showSource=true';
 
 const ImageGallery = () => {
+  const hasMounted = useHasMounted();
+  const { isDarkMode, toggleTheme } = useDarkMode();
   const [widgetUrl, setWidgetUrl] = useState(`${BASE_URL}${PATH}${queries}`);
   const [sourceIsEnable, toggleSourceIsEnabled] = useToggle(true);
 
@@ -51,6 +53,24 @@ const ImageGallery = () => {
                 isEnabled={sourceIsEnable}
                 toggle={toggleSourceIsEnabled}
               />
+            </OptionItem>
+          </SettingsPane.Section>
+
+          <SettingsPane.Section>
+            <SettingsPane.Title>Styles</SettingsPane.Title>
+            <OptionItem>
+              <OptionItem.Name>Darke Theme</OptionItem.Name>
+              <OptionItem.Description>
+                Toggle between ligth and dark theme
+              </OptionItem.Description>
+              {hasMounted ? (
+                <OptionItem.Switch
+                  isEnabled={isDarkMode}
+                  toggle={toggleTheme}
+                />
+              ) : (
+                <OptionItem.SwitchSkeleton />
+              )}
             </OptionItem>
           </SettingsPane.Section>
         </SettingsPane>
