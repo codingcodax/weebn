@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import useSWR from 'swr';
 
+import { GoToSource } from '~/components/pages/editor';
 import fetcher from '~/lib/fetcher';
 
 const ImageGallery = () => {
@@ -31,16 +32,19 @@ const ImageGallery = () => {
   return (
     <div className='relative flex h-screen w-screen flex-col items-center justify-center'>
       {data && (
-        <Image
-          alt={data.alt}
-          blurDataURL={`data:image/svg+xml;base64,${toBase64(
-            shimmer(data.width, data.height, data.color)
-          )}`}
-          fill={true}
-          objectFit='contain'
-          placeholder='blur'
-          src={data.imageUrl}
-        />
+        <>
+          <Image
+            alt={data.alt}
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(
+              shimmer(data.width, data.height, data.color)
+            )}`}
+            fill={true}
+            objectFit='contain'
+            placeholder='blur'
+            src={data.imageUrl}
+          />
+          {showSource && <GoToSource url={data?.source} />}
+        </>
       )}
     </div>
   );
