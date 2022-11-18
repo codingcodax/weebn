@@ -12,7 +12,7 @@ And if you like the project, but just don’t have time to contribute, that’s 
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the
-[weebn Code of Conduct](https://github.com/codingcodax/weebnblob/master/CODE_OF_CONDUCT.md).
+[weebn Code of Conduct](./CONTRIBUTING.md).
 By participating, you are expected to uphold this code. Please report unacceptable behavior.
 
 ## Reporting Bugs
