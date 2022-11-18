@@ -1,3 +1,4 @@
+export { default as GoToSource } from './GoToSource';
 export { default as LivePreview } from './LivePreview';
 export { default as OptionItem } from './OptionItem';
 export { default as SettingsPane } from './SettingsPane';
