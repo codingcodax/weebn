@@ -9,7 +9,7 @@ import { Skeleton } from '~/components/ui';
 import { fetcher } from 'lib';
 
 const Quotes = () => {
-  const { data } = useSWR('/api/quote', fetcher);
+  const { data } = useSWR('/api/quote', fetcher, { revalidateOnFocus: false });
   const searchParams = useSearchParams();
 
   const getSearchParams = (param: string) => {
