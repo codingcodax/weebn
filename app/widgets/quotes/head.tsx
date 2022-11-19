@@ -7,7 +7,7 @@ const Head = () => {
     ...SEO,
     title: 'quotes widget',
     description: 'Quote widget for get anime quotes with dark mode option',
-    titleTemplate: '%s',
+    titleTemplate: '%s | weebn',
   };
 
   return <NextSeo {...updateMeta} useAppDir={true} />;

@@ -7,7 +7,7 @@ const Head = () => {
     ...SEO,
     title: 'how to use',
     description: 'learn how to use our awesome widgets!',
-    titleTemplate: '%s',
+    titleTemplate: '%s | weebn',
   };
 
   return <NextSeo {...updateMeta} useAppDir={true} />;
