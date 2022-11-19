@@ -5,9 +5,9 @@ import SEO from 'next-seo.config';
 const Head = () => {
   const updateMeta = {
     ...SEO,
-    title: 'configure quotes widget',
+    title: 'image gallery widget',
     description:
-      'configure a quote widget for get anime quotes with dark mode option',
+      'image gallery widget for get random sfw from waifu.im with dark mode option',
     titleTemplate: '%s | weebn',
   };
 

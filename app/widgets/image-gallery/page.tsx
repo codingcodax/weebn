@@ -8,7 +8,9 @@ import { GoToSource } from '~/components/pages/editor';
 import fetcher from '~/lib/fetcher';
 
 const ImageGallery = () => {
-  const { data } = useSWR('/api/image-gallery', fetcher);
+  const { data } = useSWR('/api/image-gallery', fetcher, {
+    revalidateOnFocus: false,
+  });
   const searchParams = useSearchParams();
 
   const getSearchParams = (param: string) => {
